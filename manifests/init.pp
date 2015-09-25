@@ -16,12 +16,6 @@ class springiotools {
     require => Exec["wget_springtoolsuite"]	
   }
 
-  exec {"change_own":
-    command => "/bin/chown -R vagrant:root /opt/sts-bundle/sts-home/ ",
-    cwd     => "/opt",
-    require => Exec["extract_springtoolsuite"] 
-  }
-
 #  file {"/tmp/$tar_filename":
  #   ensure => absent,
  #  require => Exec["extract_springtoolsuite"]
@@ -30,6 +24,11 @@ class springiotools {
   file { '/opt/sts-bundle/sts-home':
     ensure => 'link',
     target => '/opt/sts-bundle/sts-3.7.0.RELEASE'
+  }
+
+    exec {"change_own":
+    command => "/bin/chown -R vagrant:root /opt/sts-bundle/sts-home/ ",
+    cwd     => "/opt"
   }
 
 }
