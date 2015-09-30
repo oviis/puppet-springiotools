@@ -20,34 +20,28 @@ This module install springiotools with eclipse, but you need for this to work a 
 
 ### What springiotools affects
 
-* the springiotools binary is in Sixt environment stored, without beeing into this environment 
+* the springiotools binary is in Sixt environment stored, without beeing into this environment, 
+you should need to change the variable  $default_url_location from manifests/params.pp to download it directly from the spring download page  
 
 ### Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+you should need to change the variable  $default_url_location from manifests/params.pp to download it directly from the spring download page  
 
 ### Beginning with springiotools
 
-The very basic steps needed for a user to get the module up and running. 
-
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
-
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
+STS should be started from location `/opt/sts-bundle/sts-home/STS`
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
+for this to run, you need a JDK installed
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+at the moment it is only limited on Debian derivates, like Linux Ubuntu, Mint 
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
+you can fork or copy and distribute the module 
 
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You may also add any additional sections you feel are necessary or important to include here. Please use the `## ` header. 
