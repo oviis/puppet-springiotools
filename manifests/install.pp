@@ -23,9 +23,9 @@ class springiotools::install {
     target => '/opt/sts-bundle/sts-3.7.0.RELEASE',
   }
 
-    exec {'change_own':
-    command => '/bin/chown -R vagrant:root /opt/sts-bundle/sts-home/ ',
-    cwd     => '/opt',
-    require => File['/opt/sts-bundle/sts-home'],
-  }
+#    exec {'change_mod':
+#    command => '/bin/chmod -R 755  /opt/sts-bundle/sts-home/ ',
+#    cwd     => '/opt',
+#    require => File['/opt/sts-bundle/sts-home'],
+# }
 }
